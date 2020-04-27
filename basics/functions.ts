@@ -2,28 +2,23 @@
 function sum(x: number, y: number): number {
     return x + y;
 }
-
 //
 let mySum = function (x: number, y: number): number {
     return x + y;
 };
-
 //注意不要混淆了 TypeScript 中的 => 和 ES6 中的 =>。
 //在 TypeScript 的类型定义中，=> 用来表示函数的定义，左边是输入类型，需要用括号括起来，右边是输出类型。
 let yourSum: (x: number, y: number) => number = function (x: number, y: number): number {
     return x + y;
 };
-
 //
 interface SearchFunc {
     (source: string, subString: string): boolean;
 }
-
 let mySearch: SearchFunc;
 mySearch = function(source: string, subString: string) {
     return source.search(subString) !== -1;
 }
-
 //
 function buildName(firstName: string, lastName?: string) {
     if (lastName) {
@@ -34,18 +29,14 @@ function buildName(firstName: string, lastName?: string) {
 }
 let tomcat = buildName('Tom', 'Cat');
 let tom = buildName('Tom');
-
-
 //
 function push(array: any[], ...items: any[]) {
     items.forEach(function(item) {
         array.push(item);
     });
 }
-
 let a = [];
 push(a, 1, 2, 3);
-
 //
 function reverse(x: number): number;
 function reverse(x: string): string;

@@ -4,12 +4,9 @@ jQuery1('#foo');
 jQuery1 = function(selector) {
     return document.querySelector(selector);
 };
-
 //
 jQuery2('#foo')
-
 //
 let cat = new Animal('Tom')
-
 //
 let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];

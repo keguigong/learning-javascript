@@ -17,3 +17,6 @@ yourFavNum = 7;
 function getLength(something: string | number): string {
     return something.toString();
 }
+function getStatus(para: string): void {
+    console.log
+}
