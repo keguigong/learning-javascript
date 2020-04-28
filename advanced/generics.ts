@@ -30,6 +30,73 @@ function swap<T, U>(tuple: [T, U]): [U, T] {
 
 const swapRes = swap([7, 'seven']); // ['seven', 7]
 
+// 泛型接口
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+let yourSearch: SearchFunc;
+yourSearch = function (source: string, subString: string) {
+  return source.search(subString) !== -1;
+};
+
+// 当然也可以使用含有泛型的接口来定义函数的形状
+interface CreateArrayBFunc {
+  <T>(length: number, value: T): Array<T>;
+}
+
+let createArrayB: CreateArrayBFunc;
+createArrayB = function <T>(length: number, value: T): Array<T> {
+  const result: T[] = [];
+  for (let i = 0; i < length; i++) {
+    result[i] = value;
+  }
+  return result;
+};
+
+createArrayB(3, 'x'); // ['x', 'x', 'x']
+
+function createArrayC<T = string>(length: number, value: T): Array<T> {
+  const result: T[] = [];
+  for (let i = 0; i < length; i++) {
+    result[i] = value;
+  }
+  return result;
+}
+
+// 泛型函数
+function identity<T>(arg: T): T {
+  return arg;
+}
+// 泛型函数的类型
+let myIdentity: <T>(arg: T) => T = identity;
+// 非泛型函数的类型
+let nonGeneric: (arg: any) => any;
+// 带有调用签名的对象字面量来定义泛型函数
+let myIdentityA: {<T>(arg: T): T} = identity;
+
+// 泛型接口
+interface GenericIdentityFn<T> {
+  <T>(arg: T) : T; 
+}
+function identityB<T>(arg: T): T {
+  return arg;
+}
+let myIdentityB: GenericIdentityFn<number> = identity;
+
+// 泛型类
+// 除了泛型接口，我们还可以创建泛型类。 注意，无法创建泛型枚举和泛型命名空间。
+
+class GenericNumber<T> {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
+}
+
+const myGenericNumber = new GenericNumber<string>();
+myGenericNumber.zeroValue = '';
+myGenericNumber.add = function (x, y) { return x + y; };
+
+console.log(myGenericNumber.add(myGenericNumber.zeroValue, 'test'));
+
 // 泛型约束
 function loggingIdentity<T>(arg: T): T {
   // console.log(arg.length);
@@ -56,46 +123,30 @@ function copyFields<T extends U, U>(target: T, source: U): T {
   return target;
 }
 
-// 泛型接口
-interface SearchFunc {
-  (source: string, subString: string): boolean;
-}
-let yourSearch: SearchFunc;
-yourSearch = function (source: string, subString: string) {
-  return source.search(subString) !== -1;
-};
-
-// 当然也可以使用含有泛型的接口来定义函数的形状
-interface CreateArrayBFunc {
-  <T>(length: number, value: T): Array<T>;
+// 一个更高级的例子，使用原型属性推断并约束构造函数与类实例的关系。
+class BeeKeeper {
+  hasMask: boolean;
 }
 
-let createArrayB: CreateArrayBFunc;
-createArrayB = function <T>(length: number, value: T): Array<T> {
-  const result: T[] = [];
-  for (let i = 0; i < length; i++) {
-    result[i] = value;
-  }
-  return result;
-};
-
-createArrayB(3, 'x'); // ['x', 'x', 'x']
-
-// 泛型类
-class GenericNumber<T> {
-  zeroValue: T;
-
-  add: (x: T, y: T) => T;
+class ZooKeeper {
+  nametag: string;
 }
 
-const myGenericNumber = new GenericNumber<number>();
-myGenericNumber.zeroValue = 0;
-myGenericNumber.add = function (x, y) { return x + y; };
-
-function createArrayC<T = string>(length: number, value: T): Array<T> {
-  const result: T[] = [];
-  for (let i = 0; i < length; i++) {
-    result[i] = value;
-  }
-  return result;
+class Animal {
+  numLegs: number;
 }
+
+class Bee extends Animal {
+  keeper: BeeKeeper;
+}
+
+class Lion extends Animal {
+  keeper: ZooKeeper;
+}
+
+function createInstance<A extends Animal>(C: new () => A): A {
+  return new C();
+}
+
+console.log(createInstance(Lion).keeper.nametag);  // typechecks!
+console.log(createInstance(Bee).keeper.hasMask);   // typechecks!

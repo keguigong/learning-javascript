@@ -1,6 +1,6 @@
 // public private 和 protected
 class AnimalA {
-  public name: string;
+  protected name: string;
   public constructor(name) {
     this.name = name;
   };
@@ -17,7 +17,10 @@ class SmallCat extends AnimalA {
     console.log(this.name);
   };
 };
+let smallCat = new SmallCat('Tom Cat');
+
 // readonly
+// 你可以使用 readonly关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。
 class AnimalB {
   readonly name: string;
   public constructor(name) {
@@ -31,6 +34,7 @@ console.log(animalJack.name);
 
 // 抽象类
 // 抽象类是不允许被实例化的
+// 抽象类做为其它派生类的基类使用。 它们一般不会直接被实例化。 不同于接口，抽象类可以包含成员的实现细节。
 abstract class AnimalC {
   public name;
   public constructor(name) {
