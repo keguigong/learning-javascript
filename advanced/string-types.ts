@@ -4,4 +4,4 @@ function handleEvent(ele: Element, event: EventNames) {
 }
 
 handleEvent(document.getElementById('hello'), 'scroll');  // 没问题
-// handleEvent(document.getElementById('world'), 'dbclick');
+// handleEvent(document.getElementById('world'), 'dbclick');s

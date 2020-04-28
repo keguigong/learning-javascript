@@ -5,8 +5,6 @@ jQuery1 = function(selector) {
     return document.querySelector(selector);
 };
 //
-jQuery2('#foo')
-//
-let cat = new Animal('Tom')
+jQuery2('#foo');
 //
 let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
