@@ -9,7 +9,7 @@ interface NumberArray {
 }
 let aaaa: NumberArray = [1, 1, 2, 3, 5];
 //
-function sum() {
+function sum2() {
     let args: {
         [index: number]: number;
         length: number;

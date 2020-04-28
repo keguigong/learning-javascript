@@ -1,5 +1,5 @@
 //
-function sum(x: number, y: number): number {
+function sum1(x: number, y: number): number {
     return x + y;
 }
 //
@@ -28,7 +28,7 @@ function buildName(firstName: string, lastName?: string) {
     }
 }
 let tomcat = buildName('Tom', 'Cat');
-let tom = buildName('Tom');
+let ttom = buildName('Tom');
 //
 function push(array: any[], ...items: any[]) {
     items.forEach(function(item) {

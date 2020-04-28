@@ -9,4 +9,4 @@ tomson[1].toFixed(2);
 
 tomson.push(124);
 tomson.push('male');
-tomson.push(true);
+// tomson.push(true);

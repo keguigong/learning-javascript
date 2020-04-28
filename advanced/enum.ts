@@ -11,7 +11,7 @@ console.log(Days[2] === "Tue"); // true
 console.log(Days[6] === "Sat"); // true
 
 enum Color1 {Red, Green, Blue = "blue".length};
-enum Color2 {Red = "red".length, Green, Blue};
+// enum Color2 {Red = "red".length, Green, Blue};
 
 const enum Direc {
     Up,
