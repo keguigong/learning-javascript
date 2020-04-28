@@ -12,7 +12,7 @@ function testAnimal(animal: Animal) {
 function testCat(cat: Cat) {
   return (cat as Animal);
 }
-//类型断言不是类型转换，它不会真的影响到变量的类型。
+// 类型断言不是类型转换，它不会真的影响到变量的类型。
 function toBoolean(something: any): boolean {
   return something as boolean;
 }
