@@ -35,9 +35,7 @@ function push(array: any[], ...items: any[]) {
 }
 const a = [];
 push(a, 1, 2, 3);
-//
-function reverse(x: number): number;
-function reverse(x: string): string;
+
 function reverse(x: number | string): number | string {
   if (typeof x === 'number') {
     return Number(x.toString().split('').reverse().join(''));

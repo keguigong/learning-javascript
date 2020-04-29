@@ -7,10 +7,10 @@ interface Cat {
   run(): void;
 }
 function testAnimal(animal: Animal) {
-  return (animal as Cat);
+  // return (animal as Cat);
 }
 function testCat(cat: Cat) {
-  return (cat as Animal);
+  // return (cat as Animal);
 }
 // 类型断言不是类型转换，它不会真的影响到变量的类型。
 function toBoolean(something: any): boolean {

@@ -116,12 +116,12 @@ function loggingIdentityA<T extends Lendthwise>(arg: T): T {
 loggingIdentity(7);
 
 // 多个类型参数之间也可以互相约束
-function copyFields<T extends U, U>(target: T, source: U): T {
-  for (const id in source) {
-    target[id] = (<T>source)[id];
-  }
-  return target;
-}
+// function copyFields<T extends U, U>(target: T, source: U): T {
+//   for (const id in source) {
+//     target[id] = (<T>source)[id];
+//   }
+//   return target;
+// }
 
 // 一个更高级的例子，使用原型属性推断并约束构造函数与类实例的关系。
 class BeeKeeper {
