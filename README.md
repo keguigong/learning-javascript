@@ -1,3 +1,1 @@
-# TypeScript Basics Learning
-
-Many thanks to @xcatliu https://ts.xcatliu.com/.
+# EcmaScript 6 and TypeScript Learing Basics

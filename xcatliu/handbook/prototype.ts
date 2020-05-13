@@ -1,3 +1,6 @@
+// https://juejin.im/post/5d6e19346fb9a06afc255d8a
+// https://juejin.im/post/5d6eac206fb9a06af71251bb
+
 function PersonA(name, age, gender) {
   this.name = name;
   this.age = age;

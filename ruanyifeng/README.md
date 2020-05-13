@@ -1,0 +1,1 @@
+@ruanyifeng https://es6.ruanyifeng.com/#docs/symbol
