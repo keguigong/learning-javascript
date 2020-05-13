@@ -1,16 +1,26 @@
-// 如果定义了两个相同名字的函数、接口或类，那么它们会合并成一个类型
-// 函数的合并
-// function reverse(x: number): number;
-// function reverse(x: string): string;
-// function reverse(x: number | string): number | string {
-//   if (typeof x === 'number') {
-//     return Number(x.toString().split('').reverse().join(''));
-//   } if (typeof x === 'string') {
-//     return x.split('').reverse().join('');
-//   }
-// }
+/**
+ * https://ts.xcatliu.com/advanced/declaration-merging
+ * 声明合并
+ */
 
-// 接口的合并
+/**
+ * https://ts.xcatliu.com/advanced/declaration-merging#han-shu-de-he-bing
+ * 函数的合并
+ */
+function reverse(x: number): number;
+function reverse(x: string): string;
+function reverse(x: number | string): number | string {
+  if (typeof x === 'number') {
+    return Number(x.toString().split('').reverse().join(''));
+  } if (typeof x === 'string') {
+    return x.split('').reverse().join('');
+  }
+}
+
+/**
+ * https://ts.xcatliu.com/advanced/declaration-merging#jie-kou-de-he-bing
+ * 接口的合并
+ */
 interface AlarmB {
   price: number;
 }

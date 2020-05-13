@@ -1,5 +1,9 @@
-// https://juejin.im/post/5d6e19346fb9a06afc255d8a
-// https://juejin.im/post/5d6eac206fb9a06af71251bb
+/**
+ * https://juejin.im/post/5d6e19346fb9a06afc255d8a
+ * ES6之那些年我们都迷茫的原型和类（上）
+ * https://juejin.im/post/5d6eac206fb9a06af71251bb
+ * ES6之那些年我们都迷茫的原型和类（下）
+ */
 
 function PersonA(name, age, gender) {
   this.name = name;

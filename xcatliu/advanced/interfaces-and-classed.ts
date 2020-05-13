@@ -1,4 +1,13 @@
-// 类实现接口
+/**
+ * https://ts.xcatliu.com/advanced/class-and-interfaces
+ * 类与接口
+ */
+
+
+/**
+ * https://ts.xcatliu.com/advanced/class-and-interfaces#lei-shi-xian-jie-kou
+ * 类实现接口
+ */
 interface Alarm {
   alert(): void;
 }
@@ -12,7 +21,9 @@ class SecurityDoor extends Door implements Alarm {
     console.log('SecurityDoor alert');
   }
 }
-// 一个类可以实现多个接口
+/**
+ * 一个类可以实现多个接口
+ */
 class Car implements Alarm, Light {
   alert() {
     console.log('Car alert');
@@ -28,13 +39,19 @@ class Car implements Alarm, Light {
   }
 }
 
-// 接口继承接口
+/**
+ * https://ts.xcatliu.com/advanced/class-and-interfaces#jie-kou-ji-cheng-jie-kou
+ * 接口继承接口
+ */
 interface LightableAlarm extends Alarm {
   lightOn(): void;
   lightOff(): void;
 }
 
-// 接口继承类
+/**
+ * https://ts.xcatliu.com/advanced/class-and-interfaces#jie-kou-ji-cheng-lei
+ * 接口继承类
+ */
 class Point {
   x: number;
 
@@ -45,9 +62,11 @@ class Point {
     this.y = y;
   }
 }
-
-// 为什么 TypeScript 会支持接口继承类呢？
-// 实际上，当我们在声明 class Point 时，除了会创建一个名为 Point 的类之外，同时也创建了一个名为 Point 的类型（实例的类型）。
+/**
+ * 为什么 TypeScript 会支持接口继承类呢？
+ * 实际上，当我们在声明 class Point 时，除了会创建一个名为 Point 的类之外，
+ * 同时也创建了一个名为 Point 的类型（实例的类型）。
+ */
 interface Point3d extends Point {
   z: number;
 }

@@ -1,4 +1,12 @@
-// public private 和 protected
+/**
+ * https://ts.xcatliu.com/advanced/class
+ * 类
+ */
+
+ /**
+  * https://ts.xcatliu.com/advanced/class#public-private-he-protected
+  * public private 和 protected
+  */
 class AnimalA {
   protected name: string;
   public constructor(name) {
@@ -6,10 +14,10 @@ class AnimalA {
   };
 };
 
-// let jackAnimal = new Animal("Jack");
-// console.log(jackAnimal.name);
-// jackAnimal.name = 'Tom';
-// console.log(jackAnimal.name);
+let jackAnimal = new AnimalA("Jack");
+console.log(jackAnimal.name);
+jackAnimal.name = 'Tom';
+console.log(jackAnimal.name);
 
 class SmallCat extends AnimalA {
   public constructor(name) {
@@ -19,8 +27,10 @@ class SmallCat extends AnimalA {
 };
 let smallCat = new SmallCat('Tom Cat');
 
-// readonly
-// 你可以使用 readonly关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化。
+/**
+ * https://ts.xcatliu.com/advanced/class#readonly
+ * readonly
+ */
 class AnimalB {
   readonly name: string;
   public constructor(name) {
@@ -30,11 +40,12 @@ class AnimalB {
 
 let animalJack = new AnimalB('Jack');
 console.log(animalJack.name);
-// animalJack.name = 'Tom';
+animalJack.name = 'Tom';
 
-// 抽象类
-// 抽象类是不允许被实例化的
-// 抽象类做为其它派生类的基类使用。 它们一般不会直接被实例化。 不同于接口，抽象类可以包含成员的实现细节。
+/**
+ * https://ts.xcatliu.com/advanced/class#chou-xiang-lei
+ * 抽象类
+ */
 abstract class AnimalC {
   public name;
   public constructor(name) {
@@ -53,7 +64,10 @@ class CatC extends AnimalC {
 let catC = new CatC('Tom');
 catC.sayHi()
 
-// 类的类型
+/**
+ * https://ts.xcatliu.com/advanced/class#lei-de-lei-xing
+ * 类的类型
+ */
 class AnimalD {
   name: string;
   constructor(name: string) {

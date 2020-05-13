@@ -1,4 +1,8 @@
-// 简单的例子
+/**
+ * https://ts.xcatliu.com/advanced/generics
+ * 泛型
+ */
+
 function createArray(length: number, value: any): Array<any> {
   const result = [];
   for (let i = 0; i < length; i++) {
@@ -8,10 +12,10 @@ function createArray(length: number, value: any): Array<any> {
 }
 
 createArray(3, 'x'); // ['x', 'x', 'x']
-
-// 这段代码编译不会报错，但是一个显而易见的缺陷是，它并没有准确的定义返回值的类型：
-// Array<any> 允许数组的每一项都为任意类型。但是我们预期的是，数组中每一项都应该是输入的 value 的类型。
-
+/**
+ * 这段代码编译不会报错，但是一个显而易见的缺陷是，它并没有准确的定义返回值的类型：
+ * Array<any> 允许数组的每一项都为任意类型。但是我们预期的是，数组中每一项都应该是输入的 value 的类型。
+ */
 function createArrayA<T>(length: number, value: T): Array<T> {
   const result: T[] = [];
   for (let i = 0; i < length; i++) {
@@ -19,18 +23,23 @@ function createArrayA<T>(length: number, value: T): Array<T> {
   }
   return result;
 }
-
 createArrayA<string>(3, 'x'); // ['x', 'x', 'x']
 createArrayA(3, 'x'); // ['x', 'x', 'x']
 
-// 多个类型参数
+/**
+ * https://ts.xcatliu.com/advanced/generics#duo-ge-lei-xing-can-shu
+ * 多个类型参数
+ */
 function swap<T, U>(tuple: [T, U]): [U, T] {
   return [tuple[1], tuple[0]];
 }
 
 const swapRes = swap([7, 'seven']); // ['seven', 7]
 
-// 泛型接口
+/**
+ * https://ts.xcatliu.com/advanced/generics#fan-xing-jie-kou
+ * 泛型接口
+ */
 interface SearchFunc {
   (source: string, subString: string): boolean;
 }
@@ -83,9 +92,10 @@ function identityB<T>(arg: T): T {
 }
 let myIdentityB: GenericIdentityFn<number> = identity;
 
-// 泛型类
-// 除了泛型接口，我们还可以创建泛型类。 注意，无法创建泛型枚举和泛型命名空间。
-
+/**
+ * https://ts.xcatliu.com/advanced/generics#fan-xing-lei
+ * 泛型类
+ */
 class GenericNumber<T> {
   zeroValue: T;
   add: (x: T, y: T) => T;
@@ -97,7 +107,10 @@ myGenericNumber.add = function (x, y) { return x + y; };
 
 console.log(myGenericNumber.add(myGenericNumber.zeroValue, 'test'));
 
-// 泛型约束
+/**
+ * https://ts.xcatliu.com/advanced/generics#fan-xing-yue-shu
+ * 泛型约束
+ */
 function loggingIdentity<T>(arg: T): T {
   // console.log(arg.length);
   return arg;
