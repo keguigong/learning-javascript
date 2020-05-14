@@ -1,5 +1,6 @@
 /**
- *  https://es6.ruanyifeng.com/#docs/promise#Promise-all
+ * https://es6.ruanyifeng.com/#docs/promise#Promise-all
+ * Promise.all()
  */
 
 let promise1 = (num: number) => new Promise((resolve, reject) => {

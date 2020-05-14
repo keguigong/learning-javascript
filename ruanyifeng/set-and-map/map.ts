@@ -1,5 +1,6 @@
 /**
  * https://es6.ruanyifeng.com/#docs/set-map#Map
+ * Map
  */
 
 const m = new Map();

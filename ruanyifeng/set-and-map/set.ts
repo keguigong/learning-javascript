@@ -1,5 +1,6 @@
 /**
  * https://es6.ruanyifeng.com/#docs/set-map#Set
+ * Set
  */
 
 const set = new Set();
@@ -18,6 +19,7 @@ set1 = new Set([...set1].map(x => x * 2));
 
 /**
  * https://es6.ruanyifeng.com/#docs/set-map#WeakSet
+ * WeakSet
  */
 
 // 注意，是a数组的成员成为 WeakSet 的成员，而不是a数组本身。这意味着，数组的成员只能是对象。

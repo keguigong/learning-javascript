@@ -1,5 +1,6 @@
 /**
  * https://es6.ruanyifeng.com/#docs/symbol#Symbol-for%EF%BC%8CSymbol-keyFor
+ * Symbol.for()
  */
 
 let s1 = Symbol.for('foo');

@@ -1,5 +1,6 @@
 /**
  * https://es6.ruanyifeng.com/#docs/symbol
+ * Symbol
  */
 
 const log: { [index: string]: { [index: string]: symbol } } = {};
