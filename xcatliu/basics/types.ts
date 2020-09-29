@@ -6,7 +6,8 @@
 function sayHello(person: string) {
   return 'Hello, ' + person;
 }
-let user = 'Tom';
+let user: string = 'Tom';
+
 console.log(sayHello(user));
 
 let myFavNum: string = 'Seven';

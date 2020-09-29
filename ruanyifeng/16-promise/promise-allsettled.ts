@@ -8,7 +8,7 @@
   * 只有等到所有这些参数实例都返回结果，不管是fulfilled还是rejected，包装实例才会结束。
   * 该方法由 ES2020 引入。
   */
-const promises = [
+const promisesAsAllSettled = [
   fetch('/api-1'),
   fetch('/api-2'),
   fetch('/api-3'),

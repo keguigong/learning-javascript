@@ -1,1 +1,1 @@
-# EcmaScript 6 and TypeScript Learing Basics
+# Hello Typescript
