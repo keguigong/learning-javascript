@@ -3,8 +3,8 @@
  * 数组的类型
  */
 
-let fibonacci: number[] = [1, 2, 3, 5]
-fibonacci.push(9)
+let fibonacci1: number[] = [1, 2, 3, 5]
+fibonacci1.push(9)
 
 /**
  * https://ts.xcatliu.com/basics/type-of-array#shu-zu-fan-xing
