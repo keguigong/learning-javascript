@@ -33,11 +33,4 @@ function numberEpsilon(a, b) {
 - [Day01 JS 整数是怎么表示的](https://juejin.cn/post/7048191028280426526)
 - [JavaScript 中的数字存储](https://fengmumu1.github.io/2018/06/30/js-number/)
 - [Day02 - 0.1 + 0.2 === 0.3 嘛](https://juejin.cn/post/7048554678858022925)
-- [JavaScript中0.1+0.2为什么不等于0.3？如何实现等于0.3?](https://aiguangyuan.blog.csdn.net/article/details/121323574)
-
-### `new`一个函数发生了什么
-
-
-
-**References:**
-- [Day05 - new 一个函数发生了什么？](https://juejin.cn/post/7049731312801808420)
+- [JavaScript 中 0.1+0.2 为什么不等于 0.3？如何实现等于 0.3?](https://aiguangyuan.blog.csdn.net/article/details/121323574)
