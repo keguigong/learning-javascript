@@ -1,12 +1,13 @@
 ## 简答题
 
+_2022/11/18_
 - Webpack 优化策略，你进行了那些优化，达到了什么效果
 - Qiankun 如何保证 JS 以及样式不污染，如何进行父子间通信
 - 小程序的运行逻辑
 - Vue响应式更新的原理
 - Vue Router history和hash模式有什么区别? [vue开发多页面应用 - hash模式和history模式](https://zhuanlan.zhihu.com/p/46964708)
 - DOM tree渲染过程
-- 网页从输入url到最终加载完成做了那些事情
+- 网页从输入url到最终加载完成做了那些事情? [从浏览器输入URL 到渲染完成，到底发生了什么？](https://www.jianshu.com/p/6ae4259f1c33)
 
 ## 上机题
 

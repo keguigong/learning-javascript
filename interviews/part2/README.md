@@ -1,4 +1,8 @@
-> https://juejin.cn/post/7072168887344693256
+**References:**
+
+- [https://juejin.cn/post/7072168887344693256](https://juejin.cn/post/7072168887344693256)
+
+## 简答
 
 - display 有那些值
 - display 和 visibility 区别
@@ -7,7 +11,9 @@
 - vue keep-alive 原理及属性,include 和 exclude 都写了同一个路由会怎样？
 - 一段 vuex action 代码现场 code review（try-catch、默认返回值、promise）
 
-- Q1: 打印顺序
+## 上机
+
+### Q1: 打印顺序
 
 ```js
 const p = new Promise((resolve) => {
@@ -34,7 +40,7 @@ p.then((res) => {
 });
 ```
 
-- Q2: 打印顺序
+### Q2: 打印顺序
 
 ```js
 async function async1() {
@@ -59,7 +65,7 @@ new Promise(function (resolve) {
 console.log("script end");
 ```
 
-- Q3: 打印顺序
+### Q3: 打印顺序
 
 ```js
 async function async1() {
