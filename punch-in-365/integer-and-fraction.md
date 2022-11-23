@@ -29,7 +29,6 @@ function numberEpsilon(a, b) {
 ```
 
 **References:**
-
 - [Day01 JS 整数是怎么表示的](https://juejin.cn/post/7048191028280426526)
 - [JavaScript 中的数字存储](https://fengmumu1.github.io/2018/06/30/js-number/)
 - [Day02 - 0.1 + 0.2 === 0.3 嘛](https://juejin.cn/post/7048554678858022925)
