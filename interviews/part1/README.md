@@ -19,7 +19,7 @@ class Event {
 
   off(eventName, cb) {}
 
-  once(eventName, cb, ...args) {}
+  once(eventName, cb, ...args) {}1
 
   trigger(eventName, ...args) {}
 }
