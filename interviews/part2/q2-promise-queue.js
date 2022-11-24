@@ -1,3 +1,7 @@
+/**
+ * 实现一个同时只执行 2 个请求的函数，按照顺序添加进函数，然后按照顺序输出 2，1，3，4
+ */
+
 const request1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve();
@@ -23,6 +27,8 @@ const request4 = new Promise((resolve, reject) => {
 });
 
 function scheduler(max) {
+  // Your code here
+
   count = 0;
   requestList = [];
 

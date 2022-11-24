@@ -1,3 +1,22 @@
+/**
+ * Q1 Event 订阅模型
+ * 
+ * class Event {
+ * on(eventName, cb, ...args) {}
+ * 
+ * off(eventName, cb) {}
+ * 
+ * once(eventName, cb, ...args) {}1
+ * 
+ * trigger(eventName, ...args) {}
+ * }
+ * 
+ * const event = new Event();
+ * event.on("click", () => {
+ * console.log("clicked");
+ * });
+ */
+
 class Event {
   events = {};
 
