@@ -3,25 +3,25 @@
  */
 
 function longestPalindrome(s: string): string {
-  if (s.length <= 1) return s;
-
-  let max = 0;
-  let maxStr = "";
-  for (let i = 0; i < s.length; i++) {
-    if (s.length - i < max) continue;
-
-    for (let j = 1; i + j <= s.length; j++) {
-      if (j <= max) continue;
-
-      let chunkStr = i + j === s.length ? s.slice(i) : s.slice(i, i + j);
-      let reversedStr = Array.from(chunkStr).reverse().join("");
-      if (chunkStr === reversedStr && chunkStr.length > max) {
-        max = chunkStr.length;
-        maxStr = chunkStr;
-      }
+  let str = "";
+  for (let i = 0, start = 0, end = 0; i < s.length; i++) {
+    start = i;
+    end = i;
+    while (end + 1 < s.length && s[end + 1] === s[i]) {
+      end += 1;
+    }
+    while (
+      start - 1 >= 0 && end + 1 < s.length && s[end + 1] === s[start - 1]
+    ) {
+      start -= 1;
+      end += 1;
+    }
+    if (end > start && str.length < end - start + 1) {
+      str = s.slice(start, end + 1);
     }
   }
-  return maxStr;
+
+  return str ? str : s[0];
 }
 
 let str1 =
