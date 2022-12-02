@@ -6,7 +6,7 @@
  * 
  * off(eventName, cb) {}
  * 
- * once(eventName, cb, ...args) {}1
+ * once(eventName, cb, ...args) {}
  * 
  * trigger(eventName, ...args) {}
  * }
