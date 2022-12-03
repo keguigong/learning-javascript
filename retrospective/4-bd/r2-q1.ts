@@ -2,7 +2,7 @@
  * 在node环境中并行的读取多个文件，并一起返回各个文件的行数
  */
 
-import { readFile, readFileSync } from "fs";
+import { readFile } from "fs";
 
 function readLinesOfEachFile(filePaths: string[]): Promise<any> {
   let count = 0;
@@ -44,9 +44,9 @@ function readLinesOfEachFile(filePaths: string[]): Promise<any> {
 }
 
 const filePaths = [
-  "/home/keguigong/Documents/learning-ecmascript-6/interviews/part2/q1-event.js",
-  "/home/keguigong/Documents/learning-ecmascript-6/interviews/part2/q2-promise-queue.js",
-  "/home/keguigong/Documents/learning-ecmascript-6/interviews/part2/r2-preparation.md",
+  "/home/keguigong/Documents/learning-ecmascript-6/retrospective/2-bd/q1.ts",
+  "/home/keguigong/Documents/learning-ecmascript-6/retrospective/2-bd/q2.ts",
+  "/home/keguigong/Documents/learning-ecmascript-6/retrospective/2-bd/README.md",
 ];
 
 readLinesOfEachFile(filePaths);

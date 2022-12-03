@@ -38,6 +38,8 @@ p.then((res) => {
 p.then((res) => {
   console.log(6);
 });
+
+// 0 1 4 5 6 2 3
 ```
 
 ### Q2: 打印顺序
@@ -63,6 +65,17 @@ new Promise(function (resolve) {
   console.log("promise2");
 });
 console.log("script end");
+
+/**
+ * script start
+ * async1 start
+ * async2
+ * promise1
+ * script end
+ * async1 end
+ * promise2
+ * setTimeout
+ */
 ```
 
 ### Q3: 打印顺序
@@ -100,6 +113,19 @@ new Promise(function (resolve) {
     console.log("promise3");
   });
 console.log("illegalscript end");
+
+/**
+ * illegalscript start
+ * async1 start
+ * async2 start
+ * async2 promise
+ * promise1
+ * illegalscript end
+ * async1 end
+ * promise2
+ * setTimeout
+ * promise3
+ */
 ```
 
 - Q4: 手写 eventEmitter

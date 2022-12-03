@@ -1,33 +1,34 @@
 /**
  * Q1 Event 订阅模型
- * 
+ *
  * class Event {
  * on(eventName, cb, ...args) {}
- * 
+ *
  * off(eventName, cb) {}
- * 
+ *
  * once(eventName, cb, ...args) {}
- * 
+ *
  * trigger(eventName, ...args) {}
  * }
- * 
+ *
  * const event = new Event();
  * event.on("click", () => {
  * console.log("clicked");
  * });
  */
 
-class Event {
+// @ts-nocheck
+class EventEmitter {
   events = {};
 
-  on(eventName, cb, ...args) {
+  on(eventName: string, cb: (arg?: any) => any, ...args: any) {
     if (!this.events[eventName]) {
       this.events[eventName] = [];
     }
     this.events[eventName].push({ cb, once: false });
   }
 
-  off(eventName, cb) {
+  off(eventName: string, cb: (arg?: any) => any) {
     if (this.events[eventName]) {
       let cbs = this.events[eventName];
       for (let i = 0; i < cbs.length; i++) {
@@ -39,14 +40,14 @@ class Event {
     }
   }
 
-  once(eventName, cb, ...args) {
+  once(eventName: string, cb: (arg?: any) => any, ...args: any) {
     if (!this.events[eventName]) {
       this.events[eventName] = [];
     }
     this.events[eventName].push({ cb, once: true });
   }
 
-  trigger(eventName, ...args) {
+  trigger(eventName: string, ...args: any) {
     if (!this.events) return;
 
     let cbs = this.events[eventName];
@@ -63,7 +64,7 @@ class Event {
   }
 }
 
-const e = new Event();
+const e = new EventEmitter();
 const cb1 = () => {
   console.log("clicked1");
 };

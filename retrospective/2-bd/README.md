@@ -2,7 +2,7 @@
 
 ## 简答题
 
-_2022/11/18_
+_2022/11/18 BD_
 - ts种type和interface有什么区别 [TS 中 interface 和 type 究竟有什么区别？](https://juejin.cn/post/7063521133340917773)
 - Vue keep-alive如何实现的 [Vue / keep-alive](https://www.jianshu.com/p/4b55d312d297)
 - Webpack 优化策略，你进行了那些优化，达到了什么效果
