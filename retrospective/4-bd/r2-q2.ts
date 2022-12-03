@@ -14,20 +14,24 @@
  */
 
 function decodeStr(s: string): string {
-  // 用来保存系数
+  // 保存数字的栈
   let nums = [];
-  // 用来保存临时子字符串
+  // 保存临时子字符串的栈
   let substrings = [];
-  let str1 = "";
-
-  let tmpString = "";
+  // 保存最终的字符串
+  let outstr = "";
+  // 保存嵌套结构的字符串
+  let nestedStr = "";
+  // 保存遍历的时候临时字符串
+  let tmpSubstr = "";
   for (let i = 0; i < s.length; i++) {
-    // 如果字符是字母，加一个字符
+    // 为字母字符，添加进临时字符串
     if (s[i].match(/[a-z]/)) {
-      tmpString += s[i];
+      tmpSubstr += s[i];
+      continue;
     }
 
-    // 为数字，则存入栈
+    // 为数字，则存入数字栈
     if (s[i].match(/\d/)) {
       nums.push(parseInt(s[i]));
       console.log("nums: ", nums);
@@ -35,33 +39,40 @@ function decodeStr(s: string): string {
     }
 
     if (s[i] === "[") {
-      // 遇到数字存一次子串
-      if (tmpString) {
-        substrings.push(tmpString);
+      // 为[, 添加临时字符串至栈中
+      if (tmpSubstr) {
+        substrings.push(tmpSubstr);
         console.log("substrings: ", substrings);
-        tmpString = "";
+        tmpSubstr = "";
       }
+      continue;
     }
 
+    // 为], 一层[]结束，进行计算
     if (s[i] === "]") {
-      // 说明当前[]结束，直接用tempString进行计算
-      if (substrings.length < nums.length) {
-        str1 += repeatStr(tmpString, nums.pop());
-        tmpString = "";
-        continue;
+      // 更上一层[]结束
+      if (substrings.length === nums.length) {
+        // 注意substring添加在nestedStr的前面
+        nestedStr = repeatStr(substrings.pop() + nestedStr, nums.pop());
       }
 
-      // 说明上一层[]结束
-      if (substrings.length === nums.length) {
-        // 注意substring添加在str1的前面
-        str1 = repeatStr(substrings.pop() + str1, nums.pop());
-        continue;
+      // 直接用tmpSubstr进行计算
+      if (substrings.length < nums.length) {
+        nestedStr += repeatStr(tmpSubstr, nums.pop());
+        console.log("nestedStr: ", nestedStr);
+        tmpSubstr = "";
+      }
+
+      // 如果一个嵌套结构完成，则添加到outstr
+      if (nums.length < 1) {
+        outstr += nestedStr;
+        nestedStr = "";
       }
     }
 
     // 末尾如果有字符，直接添加在后面
     if (i + 1 >= s.length) {
-      str1 += tmpString
+      outstr += tmpSubstr;
     }
   }
 
@@ -73,8 +84,8 @@ function decodeStr(s: string): string {
     return out;
   }
 
-  return str1;
+  return outstr;
 }
 
-let s = "3[a4[b]]ef";
+let s = "3[e2[a]]";
 console.log(s, "=>", decodeStr(s));
