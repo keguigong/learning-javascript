@@ -55,7 +55,7 @@ class EventEmitter {
 
     for (let i = 0; i < cbs.length; i++) {
       let { cb, once } = cbs[i];
-      cb.apply(this, args);
+      cb.apply(null, args);
 
       if (once) {
         this.off(eventName, cb);
