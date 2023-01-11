@@ -14,7 +14,7 @@ setTimeout(function () {
   console.log("D");
 }, 0);
 async1();
-new Promise((resolve) => {
+new Promise<void>((resolve) => {
   setTimeout(function () {
     console.log("F");
   }, 0);
@@ -28,3 +28,5 @@ new Promise((resolve) => {
     console.log("H");
   });
 console.log("I");
+
+// A C E I B G D F H
