@@ -7,6 +7,7 @@ _2022/12/28_
   - [JavaScript 之彻底理解原型与原型链](https://juejin.cn/post/7018355953955241997)
 - 如何拷贝函数
 - 递归如何拷贝自己，例如如何对 obj 进行深层拷贝
+  - [分享 4 种 JS 深拷贝的方法](https://cloud.tencent.com/developer/article/2019581)
 - js 的执行机制，宏任务队列和微任务队列一次是执行一个还是一次执行多个
 - nextTick 是在事件循环的什么时候执行的，什么时候可以使用到 nextTick
 
