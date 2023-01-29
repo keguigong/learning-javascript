@@ -1,6 +1,8 @@
 # Learning EcmaScript 6
 
-Recording some front-end issues like:
+Recorded some front-end questions like:
+- JavaScript knowledge
 - JavaScript runtime
 - TypeScript declarations
+- Front-end frameworks
 - ...
