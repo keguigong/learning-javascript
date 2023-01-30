@@ -37,5 +37,6 @@ c.say();
 - [Day05 - new 一个函数发生了什么？](https://juejin.cn/post/7049731312801808420)
 - [彻底理解 JavaScript 原型链（一）__proto__的默认指向](https://www.jianshu.com/p/686b61c4a43d)
 - [帮你彻底搞懂 JS 中的 prototype、__proto__与 constructor](https://blog.csdn.net/cc18868876837/article/details/81211729)
+
 - [ES6 之那些年我们都迷茫的原型和类（上）](https://juejin.cn/post/6844903933832347662)
 - [ES6 之那些年我们都迷茫的原型和类（下）](https://juejin.cn/post/6844903934344036365)
