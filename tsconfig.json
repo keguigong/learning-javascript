@@ -12,5 +12,5 @@
     "incremental": true,
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "dist", "xcatliu-ts", "ecmascript6-primer"]
+  "exclude": ["node_modules"]
 }
