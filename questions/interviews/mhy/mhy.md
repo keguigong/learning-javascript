@@ -10,6 +10,7 @@ _2022/12/28_
 - 如何拷贝函数
 - 递归如何拷贝自己，例如如何对 obj 进行深层拷贝
 
+  - [JavaScript系列： 手撕JS中的深浅拷贝](https://juejin.cn/post/6844904121577766919)
   - [分享 4 种 JS 深拷贝的方法](https://cloud.tencent.com/developer/article/2019581)
 
 ```ts

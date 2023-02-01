@@ -55,6 +55,10 @@ app.use((next) => {
 app.compose();
 ```
 
+**References:**
+
+- [函数式编程之Compose函数实现分析](https://juejin.cn/post/6844903988647690254)
+
 ## Q2 目标和
 
 给你一个整数数组 nums 和一个整数 target 。
@@ -69,3 +73,49 @@ app.compose();
 +1 + 1 - 1 + 1 + 1 = 3
 +1 + 1 + 1 - 1 + 1 = 3
 +1 + 1 + 1 + 1 - 1 = 3
+
+```ts
+function findTargetSumWays(nums: number[], target: number): number {
+  let len = nums.length;
+  let count = 0;
+  let exprList = [];
+
+  function calcSum(
+    nums: number[],
+    index: number,
+    sum: number,
+    expr = ""
+  ) {
+    if (index >= len) {
+      if (sum === target) {
+        count += 1;
+        exprList.push(expr + `=${target}`);
+      }
+    } else {
+      let _expr: string;
+      _expr = expr + "+" + nums[index];
+      calcSum(nums, index + 1, sum + nums[index], _expr);
+      _expr = expr + "-" + nums[index];
+      calcSum(nums, index + 1, sum - nums[index], _expr);
+    }
+  }
+  calcSum(nums, 0, 0);
+  console.log(exprList.join("\n"));
+  return count;
+}
+
+let nums = [1, 1, 1, 1, 1];
+let target = 3;
+findTargetSumWays(nums, target);
+
+// +1+1+1+1-1=3
+// +1+1+1-1+1=3
+// +1+1-1+1+1=3
+// +1-1+1+1+1=3
+// -1+1+1+1+1=3
+```
+
+
+**References:**
+
+- [LeetCode 目标和](https://leetcode.cn/problems/target-sum/solution/mu-biao-he-by-leetcode-solution-o0cp/)

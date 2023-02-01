@@ -6,3 +6,5 @@
 - [大前端进阶-Vue-router原理](https://segmentfault.com/a/1190000023662742)
 - [大前端进阶-vue3响应式原理及vite原理](https://segmentfault.com/a/1190000037666187)
 - [大前端进阶-Vuejs虚拟Dom及diff算法](https://segmentfault.com/a/1190000023675996)
+
+- [Day24 - 图片懒加载的原理](https://juejin.cn/post/7056794350361477134)
