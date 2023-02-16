@@ -25,6 +25,8 @@ let obj = {
 - js 的执行机制，宏任务队列和微任务队列一次是执行一个还是一次执行多个
 - nextTick 是在事件循环的什么时候执行的，什么时候可以使用到 nextTick
 
+  - [Vue中的$nextTick有什么作用？](https://vue3js.cn/interview/vue/nexttick.html)
+
 ## 参考
 
 - [原生 JS 灵魂之问, 请问你能接得住几个？(上)](https://juejin.cn/post/6844903974378668039)
