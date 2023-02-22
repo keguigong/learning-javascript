@@ -10,7 +10,7 @@ _2022/12/28_
 - 如何拷贝函数
 - 递归如何拷贝自己，例如如何对 obj 进行深层拷贝
 
-  - [JavaScript系列： 手撕JS中的深浅拷贝](https://juejin.cn/post/6844904121577766919)
+  - [JavaScript 系列： 手撕 JS 中的深浅拷贝](https://juejin.cn/post/6844904121577766919)
   - [分享 4 种 JS 深拷贝的方法](https://cloud.tencent.com/developer/article/2019581)
 
 ```ts
@@ -23,9 +23,12 @@ let obj = {
 ```
 
 - js 的执行机制，宏任务队列和微任务队列一次是执行一个还是一次执行多个
+
+  - [Promise 面试题引起的 JavaScript 事件循环机制复习](https://juejin.cn/post/6961325053984112677)
+
 - nextTick 是在事件循环的什么时候执行的，什么时候可以使用到 nextTick
 
-  - [Vue中的$nextTick有什么作用？](https://vue3js.cn/interview/vue/nexttick.html)
+  - [Vue 中的$nextTick 有什么作用？](https://vue3js.cn/interview/vue/nexttick.html)
 
 ## 参考
 

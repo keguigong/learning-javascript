@@ -2,10 +2,16 @@
 
 _2022/12/06 xhs_
 
-- SplitChunk首页面1M, 剩下的9个页面合计1M, 要求将这9个页面打包在一起如何配置？
-- nextTick如何实现的?
-- 有哪些JS沙箱隔离方法？
-- nextjs如何控制那些在Server渲染？
+- SplitChunk 首页面 1M, 剩下的 9 个页面合计 1M, 要求将这 9 个页面打包在一起如何配置？
+- nextTick 如何实现的?
+
+  - [Vue 中 nextTick 实现原理](https://juejin.cn/post/7102012612220551181)
+
+- 有哪些 JS 沙箱隔离方法？
+
+  - [面向微前端，谈谈 JavaScript 隔离沙箱机制的古往今来](https://hijiangtao.github.io/2022/06/11/JavaScript-Sandbox-Mechanism-and-Its-History/)
+
+- nextjs 如何控制那些在 Server 渲染？
 
 ## Q1 实现一个 Array 的 group 方法
 
@@ -41,6 +47,6 @@ function findString(str: string) {
 
 let str = "aabbbbcccddddddee";
 let res = findString(str);
-console.log(res.string === "d" && res.count === 6)
+console.log(res.string === "d" && res.count === 6);
 // true
 ```

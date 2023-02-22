@@ -23,6 +23,9 @@ _2022/11/23 BL_
 
 ### Webpack以及Vite
 
+- [webpack5 和 webpack4 的区别有哪些 ？](https://juejin.cn/post/6990869970385109005#heading-8)
+- [带你解读 webpack 打包原理及vite的优势](https://juejin.cn/post/7031421642513317918)
+
 **References:**
 - [webpack5 和 webpack4 的区别有哪些 ？](https://juejin.cn/post/6990869970385109005)
 - [vite和webpack的区别](https://juejin.cn/post/6893699833425559559)
