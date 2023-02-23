@@ -2,7 +2,7 @@ _2023/2/15_
 
 - 如何使用 css 实现一个三角形
 
-  - [用CSS绘制最常见的40种形状和图形](https://www.webhek.com/post/40-css-shapes/)
+  - [用 CSS 绘制最常见的 40 种形状和图形](https://www.webhek.com/post/40-css-shapes/)
 
 - 同一域名、不同路径下的两个应用，如何在浏览器中实现 token 等信息通信
 
@@ -11,7 +11,7 @@ _2023/2/15_
 
 - 加载一个 20M 的大图片在前端如何处理
 
-  - [使用渐进式JPEG来提升用户体验](https://www.biaodianfu.com/progressive-jpeg.html)
+  - [使用渐进式 JPEG 来提升用户体验](https://www.biaodianfu.com/progressive-jpeg.html)
   - [前端开发中，对图片的优化技巧有哪些？ - 贺师俊的回答 - 知乎](https://www.zhihu.com/question/21815101/answer/19410993)
 
 - 前端如何实现防抖以及节流
