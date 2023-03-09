@@ -3,9 +3,12 @@ _2023/3/6_
 ## 简答
 
 - 使用qiankun遇到的问题，有对比其他微前端框架吗
-- nodejs捕获异常能说出几种方式（提示：除了trycatch，还有window.onErrorStateChange之类的）
+- nodejs捕获异常能说出几种方式（提示：除了trycatch，还有window.onError之类的）
 - vue3 reactive和ref有什么区别
 - composition api有什么优势
+
+  - [组合式API和选项式API](https://juejin.cn/post/6985493062432587813)
+
 - 使用过lodash吗，有了解过vueuse吗
 - 有了解过低代码平台吗，有哪些优势以及劣势
 - this的指向问题
