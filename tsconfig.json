@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ES6",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
@@ -10,7 +10,6 @@
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
-    "resolveJsonModule": true
   },
   "exclude": ["node_modules"]
 }
