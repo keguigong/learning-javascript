@@ -3,6 +3,7 @@ _2023/3/10_
 - Vue2 的 data 为什么要使用函数的形式
 
   - [Vue 组件 data 为什么必须是函数？](https://juejin.cn/post/6844903478901358605)
+  - [为什么在 vue 的组件中，data 要用 function 返回对象呢？](https://blog.csdn.net/shaleilei/article/details/78084171)
 
 - Vue 的自定义指令有了解吗，如何使用
 
@@ -45,3 +46,6 @@ async function fibonacci(n) {
 
 fibonacci(131).then((res) => console.log(res))
 ```
+
+- qiankun 父子应用都适用 elementui 如何解决版本冲突？如何共用资源加载？
+- qiankun 父应用针对elementui样式的修改如何让其不影响子应用
