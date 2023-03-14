@@ -10,6 +10,9 @@ _2023/3/10_
   - [自定义指令](https://v2.cn.vuejs.org/v2/guide/custom-directive.html)
 
 - Vue3 相较于 Vue2 的更新内容
+
+  - [谈谈 vue3.0 要更新的内容相关笔记](https://juejin.cn/post/6844904096021872648)
+
 - 完成一个同步以及异步的斐波那契数列的相关函数
 
 ```js
@@ -48,4 +51,20 @@ fibonacci(131).then((res) => console.log(res))
 ```
 
 - qiankun 父子应用都适用 elementui 如何解决版本冲突？如何共用资源加载？
-- qiankun 父应用针对elementui样式的修改如何让其不影响子应用
+- qiankun 父应用针对 elementui 样式的修改如何让其不影响子应用
+- http 各版本的更新内容
+
+  - [Http 协议不同版本的区别](https://developer.aliyun.com/article/888690)
+  - [HTTP 3 规范正式发布](https://juejin.cn/post/7108562495396118541)
+
+- echarts 加载百万级别数据如何优化
+
+_2023/3/13_
+
+- 浏览器能同时发起的最多请求数量
+
+  - [chrome 浏览器并发请求数](https://juejin.cn/post/7102298393271074853)
+
+- http code 301/302/303/304 各自的含义
+
+  - [http 301、302、304、400、405、415 状态码解释](https://blog.csdn.net/wangjun5159/article/details/51239960)
