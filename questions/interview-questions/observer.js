@@ -17,10 +17,11 @@ const reactive = (obj) => {
     })
   }
 
-  return genProxy(obj)
+  obj =  genProxy(obj)
 }
 
-const obj = reactive({ a: 1, b: 2, c: { d: 12 } })
+let obj = { a: 1, b: 2, c: { d: 12 } }
+reactive(obj)
 
 obj.a = 100
 obj.b = 200
