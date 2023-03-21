@@ -33,33 +33,22 @@ const tree = {
 //   ]
 
 const tree2Arr = (tree) => {
-  if (typeof tree !== "object") return
-  let arr = []
-
-  const deep = (tree) => {
-    let currNode = tree
-    const listItem = {
-      pid: currNode.pid,
-      id: currNode.id,
+  const res = []
+  const _tree2Arr = (tree) => {
+    const { children, ...rest } = tree
+    const newItem = {
+      ...rest,
       children: []
     }
-    const childLen = currNode.children.length
-    if (childLen > 0) {
-      for (let i = 0; i < childLen; i++) {
-        listItem.children.push(currNode.children[i].id)
-        // console.log(currNode.children[i].id)
-        deep(currNode.children[i])
-      }
+    for (let i = 0; i < children.length; i++) {
+      newItem.children.push(children[i].id)
+      _tree2Arr(children[i])
     }
-    // console.log(JSON.stringify(listItem))
-    arr.push(listItem)
+    res.push(newItem)
   }
-
-  deep(tree)
-
-  return arr
+  _tree2Arr(tree)
+  return res
 }
 
 const result = tree2Arr(tree)
 console.log(JSON.stringify(result))
-// console.log('hello')

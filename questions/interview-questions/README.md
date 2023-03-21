@@ -11,3 +11,5 @@
 
 - [我对 React 实现原理的理解](https://www.51cto.com/article/713312.html)
 - [React 核心原理浅析](https://juejin.cn/post/6987197729046790175)
+
+- [vite和webpack区别](https://static.kancloud.cn/vvmily_king/vvmily/2765290)
