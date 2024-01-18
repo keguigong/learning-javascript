@@ -1,3 +1,28 @@
+```jsx
+function Comp() {
+  // some logic
+  return (
+    <div>
+      Comp
+    <div/>
+  )
+}
+```
+
+```jsx
+const App = () => {
+  return (
+    <>
+      <Comp />
+      {Comp()}
+    <>
+  )
+}
+```
+
+- App强制更新的时候，两种方式的some logic每次都会执行吗？
+- 触发更新的时候，两种方式谁的效率更高？
+
 **References:**
 
 - [字节阿里前端面经 2022 年 2 月](https://juejin.cn/post/7072168887344693256)
