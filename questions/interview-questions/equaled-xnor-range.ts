@@ -5,4 +5,10 @@
 // 5 4 3 2 1
 // 相等的区间有{1, 5} {3, 3} {2, 4}
 
-function equaledXorRange(num1: number[], num2: number[]) {}
+function equaledXorRange<T, P>(num1: T, num2: P): T {
+  return num1
+}
+
+const hello: <T, V>(x: T, y: V) => T = (x, y) => {
+  return x
+}
