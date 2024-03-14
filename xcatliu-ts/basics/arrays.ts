@@ -25,7 +25,7 @@ let aaaa: NumberArray = [1, 1, 2, 3, 5];
  * https://ts.xcatliu.com/basics/type-of-array#lei-shu-zu
  * 类数组
  */
-function sum2() {
+export function sum2() {
   let args: {
     [index: number]: number;
     length: number;
