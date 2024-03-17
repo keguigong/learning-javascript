@@ -6,7 +6,7 @@
 - [双非本科进不了大厂？阿里技术四面+交叉面+HR面，成功拿到offer](https://developer.aliyun.com/article/1397279)
 
 
-# React
+## React
 
 - [我对 React 实现原理的理解](https://www.51cto.com/article/713312.html)
 - [React 核心原理浅析](https://juejin.cn/post/6987197729046790175)
@@ -39,6 +39,6 @@
 - [设计模式目录](https://refactoringguru.cn/design-patterns/catalog)
 - [十大排序算法](https://zhuanlan.zhihu.com/p/42586566)
 
-# 网络
+## 网络
 
 - [TCP协议可靠性是如何保证之滑动窗口，超时重发，序列号确认应答信号原创](https://cloud.tencent.com/developer/article/1591989)
