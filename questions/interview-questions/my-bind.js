@@ -1,9 +1,9 @@
 Function.prototype.myBind = function (thisArg) {
   const self = this
-  const _args = Array.prototype.slice.call(self.arguments, 0)
+  const _args = Array.prototype.slice.call(self.arguments ? self.arguments : [], 0)
 
   return function () {
-    return Function.prototype.apply(thisArg, _args)
+    return self.apply(thisArg, _args)
   }
 }
 
@@ -13,11 +13,11 @@ function helloWorld() {
 }
 
 const bindObj = {
-  name: "name2"
+  name: "bindObj"
 }
 
 const obj = {
-  name: "name1",
+  name: "obj",
   fun1: helloWorld,
   fun2: helloWorld.myBind(bindObj)
 }

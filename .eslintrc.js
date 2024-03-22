@@ -1,24 +1,20 @@
 module.exports = {
   env: {
     es6: true,
-    node: true,
+    node: true
   },
-  extends: [
-    'alloy',
-  ],
+  extends: ["alloy"],
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly"
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module"
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ["@typescript-eslint"],
   rules: {
-    "no-unused-vars": "off",
-  },
-};
+    "no-unused-vars": "off"
+  }
+}

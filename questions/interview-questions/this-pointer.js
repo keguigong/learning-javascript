@@ -13,7 +13,7 @@ Vehicle.prototype.jump = function() {
 }
 
 Vehicle.prototype.duck = () => {
-  console.log('duck', this.prototype)
+  console.log('duck', this )
 }
 
 const vehicle = new Vehicle()
